@@ -34,6 +34,9 @@ Darwin)
 OpenBSD)
 	OS="openbsd"
 	;;
+NetBSD)
+	OS="netbsd"
+	;;
 *)
 	echo 'Select your operating system below:'
 	echo ' 1: Linux'
@@ -64,6 +67,10 @@ OpenBSD)
 	if test "$TMP" = "5"
 	then
 		OS="openbsd"
+	fi
+	if test "$TMP" = "6"
+	then
+		OS="netbsd"
 	fi
 
 	if test "$OS" = ""
