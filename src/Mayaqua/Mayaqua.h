@@ -251,6 +251,9 @@ int PASCAL WinMain(HINSTANCE hInst, HINSTANCE hPrev, char *CmdLine, int CmdShow)
 #ifdef	UNIX_LINUX
 #include <sys/vfs.h>
 #elif	UNIX_BSD
+#if	UNIX_NETBSD
+#define	USE_STATVFS
+#endif
 #include <sys/param.h>
 #include <sys/mount.h>
 #endif
